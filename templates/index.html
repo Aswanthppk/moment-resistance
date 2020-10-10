@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% load crispy_forms_tags %}
+
+
+
+<form  action="#" method="post" id="join-us">
+	<div class="segment">
+		<h1>MOMENT OF RESISTANCE CALCULATOR</h1>
+		</div>
+    {% csrf_token %}
+   
+
+    {{ form|crispy }}
+
+  <button class="red" type="submit"><i class="icon ion-md-lock"></i> Calculate</button>
+   
+

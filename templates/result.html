@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+</head>
+<body>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div class="segment">
+	<h1>Result</h1>
+<p>
+	<label class="Namax">MAXIMUM DEPTH OF NUTRAL AXIS (NAMAX) = <input class="result" type="text" placeholder='{{ Namax }}'/></label>
+	
+
+</p>
+<P>
+	<label>DEPTH OF NUTRAL AXIS     (NA)    =  <input class="result" type="text" placeholder='{{ ans }}'/></label>
+	
+</P>
+
+  {% if mu %}
+<p>
+	Na < Namax <br> IT IS AN UNDER REINFORCED SECTION HENCE
+</p>
+<p>
+	  <label>MOMENT OF RESISTANCE = <input class="result" type="text" placeholder='{{ mu }}'/></label>
+    
+  
+</p>
+{% else %}
+<p>
+	Na > Namax <br> It IS AN OVER REIN FORCED SECTION HENCE
+</p>
+<p>
+	 <label>LIMITING MOMENT OF RESISTANCE= <input class="result" type="text" placeholder='{{ mulimit }}'/></label>
+	 <br> <br> IT IS AN OVERREINFORCED SECTION HENCE WE NEED TO REDESIGN
+</p>
+<P>
+	<label>AREA OF STEEL WITH NAMAX=<input class="result" type="text" placeholder='{{ Ast }}'/></label>
+	
+</P>
+{% endif %}
+</div>
+</body>
+</html>
+
